@@ -15,7 +15,6 @@ def solution(priorities, location):
         tempvalue=queue.pop(0)
         if count>0:
                 queue.append(tempvalue)
-                count+=1
         else:
             priority_queue.append(tempvalue)
 
@@ -23,7 +22,5 @@ def solution(priorities, location):
     for pq_value in priority_queue:
         if pq_value[0] == location:
             answer = loc_count
-            loc_count+=1
-        else:
             loc_count+=1
     return answer
